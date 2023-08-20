@@ -18,15 +18,15 @@ import {fileURLToPath} from 'url';
  const fullPath=path.join(__dirname,'../upload');
 
 const initApp=(app,express)=>{
-    app.use(async(req,res,next)=>{
-        console.log(req.header('origin'));
-        var whitelist = ['http://example1.com', 'http://example2.com']
-       if(!whitelist.includes(req.header('origin'))){
-        return next(new Error('invalid origin header',{cause:403}));
+    // app.use(async(req,res,next)=>{
+    //     console.log(req.header(`origin`));
+    //     var whitelist = ['https://ecommerce-plum-one.vercel.app']
+    //    if(!whitelist.includes(req.header(`origin`))){
+    //     return next(new Error('invalid origin header',{cause:403}));
 
-       }
-          next();
-    })
+    //    }
+    //       next();
+    // })
 
 
 app.use(cors());
