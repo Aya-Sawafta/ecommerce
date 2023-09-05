@@ -21,7 +21,7 @@ router.put('/update/:productId',auth(endpoint.update),fileUpload(fileValidation.
 ]),ProductController.updateProduct);
 
 router.patch('/softDelete/:productId',auth(endpoint.softDelete),ProductController.softDeleteProduct);
-router.delete('/forceDelete/:productId',auth(endpoint.forceDelete),ProductController.forceDeleteProduct)
+router.delete('/forceDelete/:productId',auth(endpoint.forceDelete),ProductController.forceDeleteProduct);
 router.patch('/restore/:productId',auth(endpoint.restore),ProductController.restore);
 router.get('/softDelete/',auth(endpoint.get),ProductController.getSoftDeleteProducts);
 router.get('/:productId',ProductController.getProduct);
